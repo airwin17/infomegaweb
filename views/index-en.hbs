@@ -1,0 +1,308 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" href="/assets/semilogo.svg" type="image/x-icon" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&amp;display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="/styles.css" />
+    <script src="/index.js" defer></script>
+    <title>Infomega</title>
+  </head>
+  <body>
+    <header>
+      <img class="logo" src="/assets/logo.svg" alt="logo">
+      <img class="semilogo" src="/assets/semilogo.svg" alt="semi-logo">
+      <div class="headerLinks">
+        <a href="">Home ></a>
+        <a href="">Our Services ></a>
+        <a href="">Our Projects ></a>
+      </div>
+      <select class="lang-select" aria-label="Choose language">
+        <option value="fr">Fr</option>
+        <option value="en">En</option>
+      </select>
+      <button class="primebut">
+        <a href="mailto:contact@infomega.org">
+          Contact Us
+        </a>
+      </button>
+    </header>
+    <main>
+      <section class="mainSec">
+        <h1>INFOMEGA</h1>
+        <h2>Your IT Partner</h2>
+        <p>We design and develop optimized websites and<br>
+          mobile applications to fit our clients' needs<br>
+          and grant the best user experience.</p>
+        <button class="primebut">
+          <a href="mailto:contact@infomega.org">
+          Contact Us
+        </a>
+      </button>
+        
+      </section>
+      <section class="ServicesSec">
+        <h2>Our Services</h2>
+        <div class="servicesContainer">
+          <div class="categorieDeService" tabindex="0">
+            <img src="/assets/terminal-svgrepo-com.svg" alt="">
+            <h3>Website Creation</h3>
+          </div>
+          <div class="categorieDeService" tabindex="0">
+            <img src="/assets/search-svgrepo-com.svg" alt="">
+            <h3>Online SEO Optimization</h3>
+          </div>
+          <div class="categorieDeService" tabindex="0">
+            <img src="/assets/android-svgrepo-com.svg" alt="">
+            <h3>Mobile App Development</h3>
+          </div>
+          <div class="categorieDeService" tabindex="0">
+            <img src="/assets/wireframe-svgrepo-com.svg" alt="">
+            <h3>UX/UI App Design</h3>
+          </div>
+          <div class="categorieDeService" tabindex="0">
+            <img src="/assets/cloud-upload-svgrepo-com.svg" alt="">
+            <h3>Server Maintenance & Hosting</h3>
+          </div>
+          <div class="categorieDeService" tabindex="0">
+            <img src="/assets/monitor-alt-3-svgrepo-com.svg" alt="">
+            <h3>PC Repair</h3>
+          </div>
+        </div>
+          <div class="dialog">
+            <ul class="listWeb">
+              <li>Showcase websites</li>
+              <li>Blogs</li>
+              <li>E-commerce platforms</li>
+              <li>Custom web applications</li>
+            </ul>
+            <ul class="listSEO">
+              <li>Website quality audit</li>
+              <li>Keyword analysis</li>
+              <li>Organic SEO</li>
+              <li>Optimized content creation</li>
+            </ul>
+            <ul class="listMobileApp">
+              <li>Android applications</li>
+              <li>Progressive Web Apps (PWA)</li>
+            </ul>
+            <ul class="listUXUI">
+              <li>Mockup design</li>
+              <li>User experience (UX)</li>
+              <li>User interfaces (UI)</li>
+            </ul>
+            <ul class="listServer">
+              <li>Website hosting</li>
+              <li>Server maintenance</li>
+              <li>Database management</li>
+              <li>Data backup</li>
+            </ul>
+            <ul class="listRepair">
+              <li>PC repair</li>
+              <li>Parts replacement</li>
+          </div>
+      </section>
+      <section class="projectSec">
+        <h2>Our Projects</h2>
+        <div class="tagContainer">
+          <div class="tag">HTML/CSS/JS</div>
+          <div class="tag">Spring boot</div>
+          <div class="tag">Java</div>
+          <div class="tag">Node.js</div>
+          <div class="tag">React.js</div>
+          <div class="tag">Vue.js</div>
+          <div class="tag">Express.js</div>
+          <div class="tag">MongoDB</div>
+          <div class="tag">MySQL</div>
+          {{!-- <div class="tag">Android</div> --}}
+          <div class="tag">Nest.js</div>
+          <div class="tag">Srapi</div>
+          <div class="tag">Typescripte</div>
+          <div class="tag">Stripe</div>
+          <div class="tag">docker</div>
+          <div class="tag">webflux</div>
+        </div>
+        <div class="projectContainer">
+            {{> project title="Public Writer"
+              demoLink="https://ecrivainpublicmarseille.com/" 
+              codeLink="" imgPath="/assets/ecrivain public.webp" 
+              description="Simple showcase website for a public writer in Marseille" 
+              tags=(split "HTML/CSS/JS;Express.js;Node.js")
+              }}
+            {{> project title="PCLink"
+              demoLink="/demo/pclink/" 
+              codeLink="" imgPath="/assets/pclink.webp" 
+              description="Showcase website for a computer repair company in Marseille" 
+              tags=(split "HTML/CSS/JS;Spring boot;Java;Stripe;MySQL;Srapi")
+              }}
+            {{> project
+            title="Paymybuddy"
+            demoLink="/demo/paymybuddy/"
+            codeLink="https://github.com/airwin17/paymybuddy"
+            imgPath="/assets/paymybuddy.webp"
+            description="Online payment application"
+            tags=(split "HTML/CSS/JS;Spring boot;Java;MySQL")
+            }}
+            {{> project
+            title="Patient Manager Microservices"
+            demoLink="/demo/patientManagerMicroservices"
+            codeLink="https://github.com/airwin17/patientManagerMicroservices"
+            imgPath="/assets/patientManagerMicroservices.webp"
+            description="Patient record management application in microservices with reactive webflux architecture, an API gateway, and a discovery server"
+            tags=(split "HTML/CSS/JS;Spring boot;webflux;docker;Java;MySQL;Vue.js")
+            }}
+            {{> project
+            title="INFOMEGA"
+            demoLink="/"
+            codeLink="https://github.com/airwin17/"
+            imgPath="/assets/logo.svg"
+            description="This website"
+            tags=(split "HTML/CSS/JS;Nest.js;Typescript")
+            }}
+            {{> project
+            title="Booki"
+            demoLink="/demo/simpleHTMLCSSintegration"
+            codeLink="https://github.com/airwin17/simpleHTMLCSSintegration"
+            imgPath="/assets/simpleHTMLCSSintegration.webp"
+            description="Hotel page"
+            tags=(split "HTML/CSS")
+            }}
+            {{> project
+            title="kasa"
+            demoLink="/demo/bookingNotationReactAppExp"
+            codeLink="https://github.com/airwin17/bookingNotationReactAppExp"
+            imgPath="/assets/bookingNotationReactAppExp.webp"
+            description="Hotel application in React"
+            tags=(split "HTML/CSS/JS;React.js")
+            }}
+            
+            {{> project
+            title="architect portfolio"
+            demoLink="/demo/architectportfolio"
+            codeLink="https://github.com/airwin17/"
+            imgPath="/assets/architectportfolio.webp"
+            description="Simple architect portfolio with login"
+            tags=(split "HTML/CSS/JS;express.js")
+            }}
+          {{!-- {{> project
+            title=""
+            demoLink="/demo/"
+            codeLink="https://github.com/airwin17/"
+            imgPath="/assets/.webp"
+            description="Online payment application"
+            tags=(array "HTML/CSS/JS" "Spring boot" "Java" "MySQL")
+          }}
+          {{> project
+            title=""
+            demoLink="/demo/"
+            codeLink="https://github.com/airwin17/"
+            imgPath="/assets/.webp"
+            description="Online payment application"
+            tags=(array "HTML/CSS/JS" "Spring boot" "Java" "MySQL")
+          }}
+          {{> project
+            title=""
+            demoLink="/demo/"
+            codeLink="https://github.com/airwin17/"
+            imgPath="/assets/.webp"
+            description="Online payment application"
+            tags=(array "HTML/CSS/JS" "Spring boot" "Java" "MySQL")
+          }} --}}
+
+        </div>
+      </section>
+      <section class="times">
+        <h2>OPENING HOURS</h2>
+        <table>
+          <tbody>
+            <tr>
+              <td>Sunday</td>
+              <td>
+                <span>9:00am-12:30pm</span>
+                <br>
+                <span>1:30pm-6:00pm</span>
+              </td>
+            </tr>
+            <tr>
+              <td>Monday</td>
+              <td>
+                <span>9:00am-12:30pm</span>
+                <br>
+                <span>1:30pm-6:00pm</span>
+              </td>
+            </tr>
+            <tr>
+                <td>Tuesday</td>
+                <td>
+                  <span>9:00am-12:30pm</span>
+                  <br>
+                  <span>Closed</span>
+                </td>
+              </tr>
+              <tr>
+                <td>Wednesday</td>
+                <td>
+                  <span>9:00am-12:30pm</span>
+                  <br>
+                  <span>1:30pm-6:00pm</span>
+                </td>
+              </tr>
+              <tr>
+                <td>Thursday</td>
+                <td>
+                  <span>9:00am-12:30pm</span>
+                  <br>
+                  <span>1:30pm-6:00pm</span>
+                </td>
+              </tr>
+              <tr>
+                <td>Friday</td>
+                <td>
+                  Closed
+                </td>
+              </tr>
+              <tr>
+                <td>Saturday</td>
+                <td>
+                  <span>9:00am-12:30pm</span>
+                  <br>
+                  <span>1:30pm-6:00pm</span>
+                </td>
+              </tr>
+            
+          </tbody>
+        </table>
+    </section>
+      <section class="notreEquipe">
+        <h2>Our Current Team</h2>
+        <div class="teamContainer">
+          <div class="teamMember">
+            <div class="imgContainer">
+              <img src="/assets/me.webp" alt="Malik ait">
+            </div>
+            <div class="content">
+              <h4>Malik Ait</h4>
+              <p>Web Developer</p>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer>
+      <div class="contact">
+        <h4>Contact</h4>
+        <ul>
+            <li>+213552465987</li>
+            <li><a href="mailto:contact@infomega.org">contact@infomega.org</a></li>
+        </ul>
+    </div>
+    <div class="adress">
+        <h4>Address</h4>
+        <p>26 rue boukandoura senoussi oran 31007 </p>
+    </div>
+  </footer>
+  </body>
+</html>

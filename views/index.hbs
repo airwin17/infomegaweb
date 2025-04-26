@@ -1,0 +1,308 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" href="/assets/semilogo.svg" type="image/x-icon" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&amp;display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="/styles.css" />
+    <script src="/index.js" defer></script>
+    <title>Infomega</title>
+  </head>
+  <body>
+    <header>
+      <img class="logo" src="/assets/logo.svg" alt="logo">
+      <img class="semilogo" src="/assets/semilogo.svg" alt="semi-logo">
+      <div class="headerLinks">
+        <a href="">Accueil ></a>
+        <a href="">Nos services ></a>
+        <a href="">Nos projets ></a>
+      </div>
+      <select class="lang-select" aria-label="Choisir la langue">
+        <option value="fr">Fr</option>
+        <option value="en">En</option>
+      </select>
+      <button class="primebut">
+        <a href="mailto:contact@infomega.org">
+          Nous contacter
+        </a>
+      </button>
+    </header>
+    <main>
+      <section class="mainSec">
+        <h1>INFOMEGA</h1>
+        <h2>Votre partenaire informatique</h2>
+        <p>Nous concevons puis développons des sites web optimisés et<br>
+          des applications mobiles adaptés aux besoins des clients<br>
+          afin d’offrir la meilleure expérience utilisateur.</p>
+        <button class="primebut">
+          <a href="mailto:contact@infomega.org">
+          Nous contacter
+        </a>
+      </button>
+        
+      </section>
+      <section class="ServicesSec">
+        <h2>Nos services</h2>
+        <div class="servicesContainer">
+          <div class="categorieDeService" tabindex="0">
+            <img src="/assets/terminal-svgrepo-com.svg" alt="">
+            <h3>Création de sites web</h3>
+          </div>
+          <div class="categorieDeService" tabindex="0">
+            <img src="/assets/search-svgrepo-com.svg" alt="">
+            <h3>Optimisation du référencement en ligne SEO</h3>
+          </div>
+          <div class="categorieDeService" tabindex="0">
+            <img src="/assets/android-svgrepo-com.svg" alt="">
+            <h3>Création d'applications mobiles</h3>
+          </div>
+          <div class="categorieDeService" tabindex="0">
+            <img src="/assets/wireframe-svgrepo-com.svg" alt="">
+            <h3>Conception d’applications UX/UI</h3>
+          </div>
+          <div class="categorieDeService" tabindex="0">
+            <img src="/assets/cloud-upload-svgrepo-com.svg" alt="">
+            <h3>Maintenance et hébergement de serveur</h3>
+          </div>
+          <div class="categorieDeService" tabindex="0">
+            <img src="/assets/monitor-alt-3-svgrepo-com.svg" alt="">
+            <h3>Réparation PC</h3>
+          </div>
+        </div>
+          <div class="dialog">
+            <ul class="listWeb">
+              <li>Sites vitrines</li>
+              <li>Blogs</li>
+              <li>Plateforme e-commerce</li>
+              <li>Applications web personnalisées</li>
+            </ul>
+            <ul class="listSEO">
+              <li>Audit de qualité site web</li>
+              <li>Analyse des mots-clés</li>
+              <li>Référencement naturel</li>
+              <li>Création de contenu optimisé</li>
+            </ul>
+            <ul class="listMobileApp">
+              <li>Applications Android</li>
+              <li>Progressive Web Apps(PWA)</li>
+            </ul>
+            <ul class="listUXUI">
+              <li>Conception de maquettes</li>
+              <li>Expérience utilisateur(UX)</li>
+              <li>Interfaces utilisateur(UI)</li>
+            </ul>
+            <ul class="listServer">
+              <li>Hébergement des sites web</li>
+              <li>Maintenance de serveurs</li>
+              <li>Gestion de bases de données</li>
+              <li>Sauvegarde de données</li>
+            </ul>
+            <ul class="listRepair">
+              <li>Réparation de PC</li>
+              <li>Remplacement de pièce</li>
+          </div>
+      </section>
+      <section class="projectSec">
+        <h2>Nos projets</h2>
+        <div class="tagContainer">
+          <div class="tag">HTML/CSS/JS</div>
+          <div class="tag">Spring boot</div>
+          <div class="tag">Java</div>
+          <div class="tag">Node.js</div>
+          <div class="tag">React.js</div>
+          <div class="tag">Vue.js</div>
+          <div class="tag">Express.js</div>
+          <div class="tag">MongoDB</div>
+          <div class="tag">MySQL</div>
+          {{!-- <div class="tag">Android</div> --}}
+          <div class="tag">Nest.js</div>
+          <div class="tag">Srapi</div>
+          <div class="tag">Typescript</div>
+          <div class="tag">Stripe</div>
+          <div class="tag">Docker</div>
+          <div class="tag">Webflux</div>
+        </div>
+        <div class="projectContainer">
+            {{> project title="Écrivain public"
+              demoLink="https://ecrivainpublicmarseille.com/" 
+              codeLink="" imgPath="/assets/ecrivain public.webp" 
+              description="Simple site vitrine pour écrivain public a marseille" 
+              tags=(split "HTML/CSS/JS;Express.js;Node.js")
+              }}
+            {{> project title="PCLink"
+              demoLink="/demo/pclink/" 
+              codeLink="" imgPath="/assets/pclink.webp" 
+              description="Site vitrine pour une societé de réparation informatique a marseille" 
+              tags=(split "HTML/CSS/JS;Spring boot;Java;Stripe;MySQL;Srapi")
+              }}
+            {{> project
+            title="Paymybuddy"
+            demoLink="/demo/paymybuddy/"
+            codeLink="https://github.com/airwin17/paymybuddy"
+            imgPath="/assets/paymybuddy.webp"
+            description="application de payment en ligne"
+            tags=(split "HTML/CSS/JS;Spring boot;Java;MySQL")
+            }}
+            {{> project
+            title="Patient Manager Microservices"
+            demoLink="/demo/patientManagerMicroservices/"
+            codeLink="https://github.com/airwin17/patientManagerMicroservices"
+            imgPath="/assets/patientManagerMicroservices.webp"
+            description="application de gestion de dossier de patients en microservices avec l'architecture reactive webflux,un api gateway et un discovery server"
+            tags=(split "HTML/CSS/JS;Spring boot;webflux;docker;Java;MySQL;Vue.js")
+            }}
+            {{> project
+            title="INFOMEGA"
+            demoLink="/"
+            codeLink="https://github.com/airwin17/"
+            imgPath="/assets/logo.svg"
+            description="Ce siteweb"
+            tags=(split "HTML/CSS/JS;Nest.js;Typescript")
+            }}
+            {{> project
+            title="Booki"
+            demoLink="/demo/simpleHTMLCSSintegration/"
+            codeLink="https://github.com/airwin17/simpleHTMLCSSintegration"
+            imgPath="/assets/simpleHTMLCSSintegration.webp"
+            description="page d'hôtellerie"
+            tags=(split "HTML/CSS")
+            }}
+            {{> project
+            title="kasa"
+            demoLink="/demo/bookingNotationReactAppExp/"
+            codeLink="https://github.com/airwin17/bookingNotationReactAppExp"
+            imgPath="/assets/bookingNotationReactAppExp.webp"
+            description="application d'hôtellerie en react"
+            tags=(split "HTML/CSS/JS;React.js")
+            }}
+            
+            {{> project
+            title="architect portfolio"
+            demoLink="/demo/architectportfolio/"
+            codeLink="https://github.com/airwin17/"
+            imgPath="/assets/architectportfolio.webp"
+            description="simple portfolio d'architecte avec login"
+            tags=(split "HTML/CSS/JS;express.js")
+            }}
+          {{!-- {{> project
+            title=""
+            demoLink="/demo/"
+            codeLink="https://github.com/airwin17/"
+            imgPath="/assets/.webp"
+            description="application de payment en ligne"
+            tags=(array "HTML/CSS/JS" "Spring boot" "Java" "MySQL")
+          }}
+          {{> project
+            title=""
+            demoLink="/demo/"
+            codeLink="https://github.com/airwin17/"
+            imgPath="/assets/.webp"
+            description="application de payment en ligne"
+            tags=(array "HTML/CSS/JS" "Spring boot" "Java" "MySQL")
+          }}
+          {{> project
+            title=""
+            demoLink="/demo/"
+            codeLink="https://github.com/airwin17/"
+            imgPath="/assets/.webp"
+            description="application de payment en ligne"
+            tags=(array "HTML/CSS/JS" "Spring boot" "Java" "MySQL")
+          }} --}}
+
+        </div>
+      </section>
+      <section class="times">
+        <h2>HORAIRES D'OUVERTURE</h2>
+        <table>
+          <tbody>
+            <tr>
+              <td>Dimanche</td>
+              <td>
+                <span>9h00-12h30</span>
+                <br>
+                <span>13h30-18h00</span>
+              </td>
+            </tr>
+            <tr>
+              <td>Lundi</td>
+              <td>
+                <span>9h00-12h30</span>
+                <br>
+                <span>13h30-18h00</span>
+              </td>
+            </tr>
+            <tr>
+                <td>Mardi</td>
+                <td>
+                  <span>9h00-12h30</span>
+                  <br>
+                  <span>Fermé</span>
+                </td>
+              </tr>
+              <tr>
+                <td>Mercredi</td>
+                <td>
+                  <span>9h00-12h30</span>
+                  <br>
+                  <span>13h30-18h00</span>
+                </td>
+              </tr>
+              <tr>
+                <td>Jeudi</td>
+                <td>
+                  <span>9h00-12h30</span>
+                  <br>
+                  <span>13h30-18h00</span>
+                </td>
+              </tr>
+              <tr>
+                <td>Vendredi</td>
+                <td>
+                  Fermé
+                </td>
+              </tr>
+              <tr>
+                <td>Samedi</td>
+                <td>
+                  <span>9h00-12h30</span>
+                  <br>
+                  <span>13h30-18h00</span>
+                </td>
+              </tr>
+            
+          </tbody>
+        </table>
+    </section>
+      <section class="notreEquipe">
+        <h2>Notre équipe actuelle</h2>
+        <div class="teamContainer">
+          <div class="teamMember">
+            <div class="imgContainer">
+              <img src="/assets/me.webp" alt="Malik ait">
+            </div>
+            <div class="content">
+              <h4>Malik Ait</h4>
+              <p>Développeur web</p>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer>
+      <div class="contact">
+        <h4>Contact</h4>
+        <ul>
+            <li>+213552465987</li>
+            <li><a href="mailto:contact@infomega.org">contact@infomega.org</a></li>
+        </ul>
+    </div>
+    <div class="adress">
+        <h4>Adresse</h4>
+        <p>26 rue boukandoura senoussi oran 31007 </p>
+    </div>
+  </footer>
+  </body>
+</html>

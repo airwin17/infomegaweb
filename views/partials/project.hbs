@@ -1,0 +1,18 @@
+<div class="project" tabindex="0">
+    <div class="toCheck">
+        <div class="buttonDiv">
+            <button class="primebut showcase" onclick="location.href='{{demoLink}}'">visiter</button>
+            <button class="secondbut git" onclick="location.href='{{codeLink}}'">code</button>
+        </div>
+    </div>
+    <div class="imgContainer">
+        <img src="{{imgPath}}" alt="project image">
+    </div>
+    <h3>{{title}}</h3>
+    <p>{{description}}</p>
+    <div class="tags">
+        {{#each tags}}
+            <div class="tag">{{this}}</div>
+        {{/each}}
+    </div>
+</div>

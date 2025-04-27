@@ -1,7 +1,9 @@
 import { NestFactory } from '@nestjs/core';
 import { AppModule } from './app.module';
 import { NestExpressApplication } from '@nestjs/platform-express';
+
 import hbs from 'hbs';
+import * as dotenv from 'dotenv';
 
 async function bootstrap() {
   const app = await NestFactory.create<NestExpressApplication>(AppModule);
@@ -17,6 +19,8 @@ async function bootstrap() {
     }
     return [];
   });
+  //console.log("PORT", process.env.PORT);
+  dotenv.config({ path: './.env' });
   await app.listen(process.env.PORT ?? 3000);
 }
 bootstrap();

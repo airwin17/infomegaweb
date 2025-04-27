@@ -9,39 +9,35 @@ import { Response } from 'express';
 export class DemoController {
     @Get(["/pclink/*path","/pclink"])
     async getPclink(@Param("path") path: string|string[], @Res() res: Response,@Req() req: Request) {
-        this.proxyRequest(path, res,req,"http://localhost:8080");
+        this.proxyRequest(path, res,req,"http://localhost:"+process.env.PCLINK);
     }
     @Get(["/paymybuddy/*path","/paymybuddy"])
     getPaymybuddy(@Param("path") path: string|string[], @Res() res: Response,@Req() req: Request) {
-        this.proxyRequest(path, res,req,"http://localhost:8078");
+        this.proxyRequest(path, res,req,"http://localhost:"+process.env.PAYMYBUDDY);
     }
     @Post(["/paymybuddy","/paymybuddy/*path"])
     postPaymybuddy(@Param("path") path: string|string[], @Res() res: Response,@Req() req: Request) {
-        this.proxyRequest(path, res,req,"http://localhost:8078");
+        this.proxyRequest(path, res,req,"http://localhost:"+process.env.PAYMYBUDDY);
     }
     @Get(["/patientManagerMicroservices","/patientManagerMicroservices/*path"])
     getPatientManager(@Param("path") path: string|string[], @Res() res: Response,@Req() req: Request) {
-        this.proxyRequest(path, res,req,"http://localhost:8082");
-    }
-    @Post(["/architectportfolio","/architectportfolio/*path"])
-    postPatientManager(@Param("path") path: string|string[], @Res() res: Response, @Req() req: Request) {
-        this.proxyRequest(path, res,req,"http://localhost:8082");
+        this.proxyRequest(path, res,req,"http://localhost:"+process.env.PATIENTMANAGERMICROSERVICES);
     }
     @Get(["/simpleHTMLCSSintegration","/simpleHTMLCSSintegration/*path"])
     getBooki(@Param("path") path: string|string[], @Res() res: Response,@Req() req: Request) {
-        this.proxyRequest(path, res,req,"http://localhost:8083");
+        this.proxyRequest(path, res,req,"http://localhost:"+process.env.BOOKI);
     }
     @Get(["/bookingNotationReactAppExp","/bookingNotationReactAppExp/*path"])
     getKasa(@Param("path") path: string|string[], @Res() res: Response,@Req() req: Request){
-        this.proxyRequest(path, res,req,"http://localhost:8084");
+        this.proxyRequest(path, res,req,"http://localhost:"+process.env.KASA);
     }
     @Get(["/architectportfolio","/architectportfolio/*path"])
     getArchitectPortfolio(@Param("path") path: string|string[], @Res() res: Response,@Req() req: Request) {
-        this.proxyRequest(path, res,req,"http://localhost:5678");
+        this.proxyRequest(path, res,req,"http://localhost:"+process.env.ARCHITECTPORTFOLIO);
     }
     @Post(["/architectportfolio","/architectportfolio/*path"])
     postArchitectPortfolio(@Param("path") path: string|string[], @Res() res: Response, @Req() req: Request) {
-        this.proxyRequest(path, res,req,"http://localhost:5678");
+        this.proxyRequest(path, res,req,"http://localhost:"+process.env.ARCHITECTPORTFOLIO);
     }
     async proxyRequest(path: string|string[], res: Response,req: Request,host : string) {
         //generate the target server URL based on the path parameter

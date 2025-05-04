@@ -19,7 +19,7 @@ async function bootstrap() {
     }
     return [];
   });
-  //console.log("PORT", process.env.PORT);
+  console.log("PORT", process.env.PORT);
   dotenv.config({ path: './.env' });
   await app.listen(process.env.PORT ?? 3000);
 }

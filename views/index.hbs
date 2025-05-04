@@ -31,7 +31,7 @@
       </button>
     </header>
     <main>
-      <section class="mainSec">
+      <section class="mainSec" id="mainSec">
         <h1>INFOMEGA</h1>
         <h2>Votre partenaire informatique</h2>
         <p>Nous concevons puis développons des sites web optimisés et<br>
@@ -44,7 +44,7 @@
       </button>
         
       </section>
-      <section class="ServicesSec">
+      <section class="ServicesSec" id="servicesSec">
         <h2>Nos services</h2>
         <div class="servicesContainer">
           <div class="categorieDeService" tabindex="0">
@@ -115,17 +115,17 @@
           <div class="tag">React.js</div>
           <div class="tag">Vue.js</div>
           <div class="tag">Express.js</div>
-          <div class="tag">MongoDB</div>
+          {{!-- <div class="tag">MongoDB</div> --}}
           <div class="tag">MySQL</div>
           {{!-- <div class="tag">Android</div> --}}
           <div class="tag">Nest.js</div>
-          <div class="tag">Srapi</div>
+          {{!-- <div class="tag">Srapi</div> --}}
           <div class="tag">Typescript</div>
           <div class="tag">Stripe</div>
-          <div class="tag">Docker</div>
-          <div class="tag">Webflux</div>
+          {{!-- <div class="tag">Docker</div> --}}
+          {{!-- <div class="tag">Webflux</div> --}}
         </div>
-        <div class="projectContainer">
+        <div class="projectContainer" id="projectContainer">
             {{> project title="Écrivain public"
               demoLink="https://ecrivainpublicmarseille.com/" 
               codeLink="https://github.com/airwin17/ecrivainpublic" 
@@ -147,14 +147,14 @@
             description="application de payment en ligne"
             tags=(split "HTML/CSS/JS;Spring boot;Java;MySQL")
             }}
-            {{> project
+            {{!-- {{> project
             title="Patient Manager Microservices"
             demoLink="/demo/patientManagerMicroservices/"
             codeLink="https://github.com/airwin17/patientManagerMicroservices"
             imgPath="/assets/patientManagerMicroservices.webp"
             description="application de gestion de dossier de patients en microservices avec l'architecture reactive webflux,un api gateway et un discovery server"
             tags=(split "HTML/CSS/JS;Spring boot;webflux;docker;Java;MySQL;Vue.js")
-            }}
+            }} --}}
             {{> project
             title="INFOMEGA"
             demoLink="/"
@@ -173,21 +173,21 @@
             }}
             {{> project
             title="kasa"
-            demoLink="/demo/bookingNotationReactAppExp/"
+            demoLink="/demo/bookingNotationReactAppExp/Accueil"
             codeLink="https://github.com/airwin17/bookingNotationReactAppExp"
             imgPath="/assets/bookingNotationReactAppExp.webp"
             description="application d'hôtellerie en react"
             tags=(split "HTML/CSS/JS;React.js")
             }}
             
-            {{> project
+            {{!-- {{> project
             title="architect portfolio"
             demoLink="/demo/architectportfolio/"
             codeLink="https://github.com/airwin17/"
             imgPath="/assets/architectportfolio.webp"
             description="simple portfolio d'architecte avec login"
             tags=(split "HTML/CSS/JS;express.js")
-            }}
+            }} --}}
           {{!-- {{> project
             title=""
             demoLink="/demo/"

@@ -31,20 +31,19 @@
       </button>
     </header>
     <main>
-      <section class="mainSec">
+      <section class="mainSec" id="mainSec">
         <h1>INFOMEGA</h1>
         <h2>Your IT Partner</h2>
         <p>We design and develop optimized websites and<br>
-          mobile applications to fit our clients' needs<br>
-          and grant the best user experience.</p>
+          mobile applications tailored to clients' needs<br>
+          to provide the best user experience.</p>
         <button class="primebut">
           <a href="mailto:contact@infomega.org">
           Contact Us
         </a>
       </button>
-        
       </section>
-      <section class="ServicesSec">
+      <section class="ServicesSec" id="servicesSec">
         <h2>Our Services</h2>
         <div class="servicesContainer">
           <div class="categorieDeService" tabindex="0">
@@ -72,38 +71,39 @@
             <h3>PC Repair</h3>
           </div>
         </div>
-          <div class="dialog">
-            <ul class="listWeb">
-              <li>Showcase websites</li>
-              <li>Blogs</li>
-              <li>E-commerce platforms</li>
-              <li>Custom web applications</li>
-            </ul>
-            <ul class="listSEO">
-              <li>Website quality audit</li>
-              <li>Keyword analysis</li>
-              <li>Organic SEO</li>
-              <li>Optimized content creation</li>
-            </ul>
-            <ul class="listMobileApp">
-              <li>Android applications</li>
-              <li>Progressive Web Apps (PWA)</li>
-            </ul>
-            <ul class="listUXUI">
-              <li>Mockup design</li>
-              <li>User experience (UX)</li>
-              <li>User interfaces (UI)</li>
-            </ul>
-            <ul class="listServer">
-              <li>Website hosting</li>
-              <li>Server maintenance</li>
-              <li>Database management</li>
-              <li>Data backup</li>
-            </ul>
-            <ul class="listRepair">
-              <li>PC repair</li>
-              <li>Parts replacement</li>
-          </div>
+        <div class="dialog">
+          <ul class="listWeb">
+            <li>Showcase websites</li>
+            <li>Blogs</li>
+            <li>E-commerce platforms</li>
+            <li>Custom web applications</li>
+          </ul>
+          <ul class="listSEO">
+            <li>Website quality audit</li>
+            <li>Keyword analysis</li>
+            <li>Organic SEO</li>
+            <li>Optimized content creation</li>
+          </ul>
+          <ul class="listMobileApp">
+            <li>Android applications</li>
+            <li>Progressive Web Apps (PWA)</li>
+          </ul>
+          <ul class="listUXUI">
+            <li>Mockup design</li>
+            <li>User experience (UX)</li>
+            <li>User interfaces (UI)</li>
+          </ul>
+          <ul class="listServer">
+            <li>Website hosting</li>
+            <li>Server maintenance</li>
+            <li>Database management</li>
+            <li>Data backup</li>
+          </ul>
+          <ul class="listRepair">
+            <li>PC repair</li>
+            <li>Parts replacement</li>
+          </ul>
+        </div>
       </section>
       <section class="projectSec">
         <h2>Our Projects</h2>
@@ -115,20 +115,21 @@
           <div class="tag">React.js</div>
           <div class="tag">Vue.js</div>
           <div class="tag">Express.js</div>
-          <div class="tag">MongoDB</div>
+          {{!-- <div class="tag">MongoDB</div> --}}
           <div class="tag">MySQL</div>
           {{!-- <div class="tag">Android</div> --}}
           <div class="tag">Nest.js</div>
-          <div class="tag">Srapi</div>
-          <div class="tag">Typescripte</div>
+          {{!-- <div class="tag">Srapi</div> --}}
+          <div class="tag">Typescript</div>
           <div class="tag">Stripe</div>
-          <div class="tag">docker</div>
-          <div class="tag">webflux</div>
+          {{!-- <div class="tag">Docker</div> --}}
+          {{!-- <div class="tag">Webflux</div> --}}
         </div>
-        <div class="projectContainer">
+        <div class="projectContainer" id="projectContainer">
             {{> project title="Public Writer"
               demoLink="https://ecrivainpublicmarseille.com/" 
-              codeLink="" imgPath="/assets/ecrivain public.webp" 
+              codeLink="https://github.com/airwin17/ecrivainpublic" 
+              imgPath="/assets/ecrivain public.webp" 
               description="Simple showcase website for a public writer in Marseille" 
               tags=(split "HTML/CSS/JS;Express.js;Node.js")
               }}
@@ -146,14 +147,14 @@
             description="Online payment application"
             tags=(split "HTML/CSS/JS;Spring boot;Java;MySQL")
             }}
-            {{> project
+            {{!-- {{> project
             title="Patient Manager Microservices"
-            demoLink="/demo/patientManagerMicroservices"
+            demoLink="/demo/patientManagerMicroservices/"
             codeLink="https://github.com/airwin17/patientManagerMicroservices"
             imgPath="/assets/patientManagerMicroservices.webp"
             description="Patient record management application in microservices with reactive webflux architecture, an API gateway, and a discovery server"
             tags=(split "HTML/CSS/JS;Spring boot;webflux;docker;Java;MySQL;Vue.js")
-            }}
+            }} --}}
             {{> project
             title="INFOMEGA"
             demoLink="/"
@@ -164,7 +165,7 @@
             }}
             {{> project
             title="Booki"
-            demoLink="/demo/simpleHTMLCSSintegration"
+            demoLink="/demo/simpleHTMLCSSintegration/"
             codeLink="https://github.com/airwin17/simpleHTMLCSSintegration"
             imgPath="/assets/simpleHTMLCSSintegration.webp"
             description="Hotel page"
@@ -172,46 +173,21 @@
             }}
             {{> project
             title="kasa"
-            demoLink="/demo/bookingNotationReactAppExp"
+            demoLink="/demo/bookingNotationReactAppExp/Accueil"
             codeLink="https://github.com/airwin17/bookingNotationReactAppExp"
             imgPath="/assets/bookingNotationReactAppExp.webp"
             description="Hotel application in React"
             tags=(split "HTML/CSS/JS;React.js")
             }}
             
-            {{> project
+            {{!-- {{> project
             title="architect portfolio"
-            demoLink="/demo/architectportfolio"
+            demoLink="/demo/architectportfolio/"
             codeLink="https://github.com/airwin17/"
             imgPath="/assets/architectportfolio.webp"
             description="Simple architect portfolio with login"
             tags=(split "HTML/CSS/JS;express.js")
-            }}
-          {{!-- {{> project
-            title=""
-            demoLink="/demo/"
-            codeLink="https://github.com/airwin17/"
-            imgPath="/assets/.webp"
-            description="Online payment application"
-            tags=(array "HTML/CSS/JS" "Spring boot" "Java" "MySQL")
-          }}
-          {{> project
-            title=""
-            demoLink="/demo/"
-            codeLink="https://github.com/airwin17/"
-            imgPath="/assets/.webp"
-            description="Online payment application"
-            tags=(array "HTML/CSS/JS" "Spring boot" "Java" "MySQL")
-          }}
-          {{> project
-            title=""
-            demoLink="/demo/"
-            codeLink="https://github.com/airwin17/"
-            imgPath="/assets/.webp"
-            description="Online payment application"
-            tags=(array "HTML/CSS/JS" "Spring boot" "Java" "MySQL")
-          }} --}}
-
+            }} --}}
         </div>
       </section>
       <section class="times">
@@ -272,7 +248,6 @@
                   <span>1:30pm-6:00pm</span>
                 </td>
               </tr>
-            
           </tbody>
         </table>
     </section>

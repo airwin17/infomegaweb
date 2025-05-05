@@ -88,8 +88,9 @@ export class DemoController {
             for(let key in req.headers) {
                 options.headers[key] = req.headers[key] as string;
             }
-            response = await fetch(targetUrl, options);
-            const location=response.headers.get("location") as string;
+            try {
+                response = await fetch(targetUrl, options);
+                const location=response.headers.get("location") as string;
             if(location){
                 const cookies = response.headers.get("set-cookie");
                 const redirectHeader = new Headers(response.headers);
@@ -100,16 +101,26 @@ export class DemoController {
                 res.send();
                 return;
             }
+            } catch (error) {
+                res.send(error)
+                return;
+            }
+            
         }else{
             if(req.headers["cookie"]){
                 const headers: Record<string, string> = {};
                 for (const key in req.headers) {
                     headers[key] = req.headers[key] as string;
                 }
-                response = await fetch(targetUrl, {
-                    headers:headers,
-                    credentials: 'include' as RequestCredentials,
-                });
+                try {
+                    response = await fetch(targetUrl, {
+                        headers:headers,
+                        credentials: 'include' as RequestCredentials,
+                    });
+                } catch (error) {
+                    res.send(error);
+                    return;
+                }
             }else{
                 try {
                     response = await fetch(targetUrl,{redirect: 'manual' });
@@ -125,7 +136,8 @@ export class DemoController {
                         });
                     }
                 } catch (error) {
-                    console.log(error)
+                    res.send(error)
+                    return;
                 }
             }
             

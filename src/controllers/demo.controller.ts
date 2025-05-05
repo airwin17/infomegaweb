@@ -34,7 +34,9 @@ export class DemoController {
     @Get(["/bookingNotationReactAppExp","/bookingNotationReactAppExp/*path"])
     getKasa(@Param("path") path: string|string[], @Res() res: Response,@Req() req: Request){
         /* this.proxyRequest(path, res,req,"http://localhost:"+process.env.KASA); */
-        res.redirect("http://localhost:"+process.env.KASA+"/Accueil")
+        const localHost=req.host;
+
+        res.redirect(req.protocol+"://"+localHost+":"+process.env.KASA+"/Accueil")
     }
     @Get(["/architectportfolio","/architectportfolio/*path"])
     getArchitectPortfolio(@Param("path") path: string|string[], @Res() res: Response,@Req() req: Request) {

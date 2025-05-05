@@ -158,9 +158,13 @@ export class DemoController {
                 res.setHeader(key,value);
             })
             const headers= res.getHeaders();
-            let data:null | string | Uint8Array= null;
+            let data:null | string | Blob= null;
             if(contentType&&(contentType.includes("image/webp")||contentType.includes("image/png")||contentType.includes("image/jpeg")||contentType.includes("image/jpg"))){
-                data = await response.bytes();
+                res.status(status);
+                data = await response.blob() as Blob;
+                const arrayBuffer = await data.arrayBuffer();
+                res.send(Buffer.from(arrayBuffer));
+                return;
             }else if(contentType){
                 data = await response.text() as string;
             }

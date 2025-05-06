@@ -7,7 +7,6 @@ import { Request, Response } from 'express';
 import * as dotenv from 'dotenv';
 import { createProxyServer} from "http-proxy"
 dotenv.config({ path: './.env' });
-
 @Controller("/demo")
 export class DemoController {
     @Get(["/pclink/*path","/pclink"])
@@ -34,9 +33,9 @@ export class DemoController {
     @Get(["/bookingNotationReactAppExp","/bookingNotationReactAppExp/*path"])
     getKasa(@Param("path") path: string|string[], @Res() res: Response,@Req() req: Request){
         /* this.proxyRequest(path, res,req,"http://localhost:"+process.env.KASA); */
-        const localHost=req.host;
+        const localHost="51.195.101.209";
 
-        res.redirect(req.protocol+"://"+localHost+":"+process.env.KASA+"/Accueil")
+        res.redirect("http://"+localHost+":"+process.env.KASA+"/Accueil")
     }
     @Get(["/architectportfolio","/architectportfolio/*path"])
     getArchitectPortfolio(@Param("path") path: string|string[], @Res() res: Response,@Req() req: Request) {

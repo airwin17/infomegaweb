@@ -43,11 +43,14 @@
         }
     }
 }
+html {
+    width: 100%;
+}
 header {
     overflow: visible;
     position: sticky;
     top: 0;
-    background-color: #E1C16E;
+    background-color: var(--main-color);
     z-index: 5;
     height: 50px;
     display: flex;
@@ -246,11 +249,18 @@ a {
         font-size: 26px;
         margin: 0;
     }
-
+    >h2{
+        font-size: 22px;
+        margin: 10px 0;
+        @media (max-width: 400px) {
+            font-size: 18px;
+        }
+    }
     >p {
         font-size: 16px;
         margin: 0;
         text-align: center;
+        max-width: 450px;
     }
 
 }
@@ -387,13 +397,13 @@ a {
     }
 }
 
-.projectSec > .projectContainer > .project:nth-of-type(5) > .imgContainer {
+.projectSec > .projectContainer > .project:nth-of-type(4) > .imgContainer {
     display: flex;
     justify-content: center;
+
     > img{
         width: 90%;
         align-self: center;
-        
     }
     
 }
@@ -405,7 +415,7 @@ a {
         background-color: var(--second-color);
         color: white;
         border-radius: 30px;
-        padding: 10px;
+        padding: 7px;
         text-align: center;
         margin: 5px;
         width: max-content;
@@ -436,10 +446,8 @@ a {
         > .project{
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
             transition: box-shadow 0.3s ease-in-out;
-            display: grid;
-            grid-template-rows: 40% min-content min-content max-content;
+            
             width: 400px;
-            aspect-ratio: 3.5/3.5;
             margin: 10px;
             border-radius: 10px;
             overflow: hidden;
@@ -464,6 +472,7 @@ a {
                 background-color: var(--main-color);
                 width: 100%;
                 overflow: hidden;
+                aspect-ratio: 40/23;
                 img{
                     width: 100%;
                     object-fit: cover;
@@ -477,7 +486,6 @@ a {
                 justify-content: center;
                 align-items: center;
                 justify-items: center;
-                margin: 10px auto;
                 width: 100%;
             }
             &:focus{
@@ -528,7 +536,7 @@ a {
     }
 
     table {
-        width: 500px;
+        min-width: 300px;
         margin: 10px auto;
         border-width: 0;
         border-collapse: collapse;
